@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كريم أبو الصحاب | روابط التواصل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: rgba(22, 27, 34, 0.75);
+            --card-border: rgba(255, 215, 0, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: #9da7b3;
+            --gold-accent: #d4af37;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px 15px;
+        }
+
+        /* خلفية الصورة مع التمويه (Blur) */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('profile.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(12px) brightness(0.25);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* البروفايل والصورة الشخصية */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0d0f12;
+        }
+
+        .profile-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(180deg, #ffffff 0%, #dfb76c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .profile-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* كروت اللينكات */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .card-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-box {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        /* ألوان الأيقونات */
+        .tiktok .icon-box { background: linear-gradient(45deg, #ff0050, #00f2fe); }
+        .facebook .icon-box { background: #1877f2; }
+        .instagram .icon-box { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .telegram .icon-box { background: #229ed9; }
+        .location .icon-box { background: #34a853; }
+
+        .text-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .platform-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .platform-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .arrow-icon {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover .arrow-icon {
+            transform: translateX(-5px);
+            color: var(--gold-accent);
+        }
+
+        footer {
+            margin-top: 30px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="container">
+        <div class="profile-section">
+            <div class="avatar-wrapper">
+                <img src="profile.jpg" alt="كريم أبو الصحاب" class="avatar-img">
+            </div>
+            <h1 class="profile-title">كريم أبو الصحاب</h1>
+            <p class="profile-subtitle">كل روابط التواصل والموقع في مكان واحد</p>
+        </div>
+
+        <div class="links-container">
+            <a href="https://www.tiktok.com/@sa3at_karim_aboelso7ab?_r=1&_t=ZS-9ATNIN5gHq5" target="_blank" class="link-card tiktok">
+                <div class="card-info">
+                    <div class="icon-box"><i class="fa-brands fa-tiktok"></i></div>
+                    <div class="text-group">
+                        <span class="platform-name">تيك توك</span>
+                        <span class="platform-desc">افتح حساب كريم على تيك توك</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            </a>
+
+            <a href="https://www.facebook.com/share/1KYgGFKkxt/" target="_blank" class="link-card facebook">
+                <div class="card-info">
+                    <div class="icon-box"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="text-group">
+                        <span class="platform-name">فيسبوك</span>
+                        <span class="platform-desc">افتح صفحة فيسبوك</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            </a>
+
+            <a href="https://www.instagram.com/karim__ragab?rpxt=YTRkem13cjUzcHF6" target="_blank" class="link-card instagram">
+                <div class="card-info">
+                    <div class="icon-box"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="text-group">
+                        <span class="platform-name">إنستجرام</span>
+                        <span class="platform-desc">افتح حساب إنستجرام</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            </a>
+
+            <a href="https://t.me/karimaBolso7aB" target="_blank" class="link-card telegram">
+                <div class="card-info">
+                    <div class="icon-box"><i class="fa-paper-plane"></i></div>
+                    <div class="text-group">
+                        <span class="platform-name">تلجرام</span>
+                        <span class="platform-desc">افتح قناة تلجرام</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            </a>
+
+            <a href="https://maps.app.goo.gl/2QrMU5ETgc6QjpMw9?g_st=ac" target="_blank" class="link-card location">
+                <div class="card-info">
+                    <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text-group">
+                        <span class="platform-name">الموقع الجغرافي</span>
+                        <span class="platform-desc">افتح الموقع على خرائط Google</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-left arrow-icon"></i>
+            </a>
+        </div>
+
+        <footer>
+            ◆ تابعني وكن جزءاً من الرحلة ◆
+        </footer>
+    </div>
+
+</body>
+</html>
