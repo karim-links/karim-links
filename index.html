@@ -3,107 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كريم أبو الصحاب | روابط التواصل</title>
-  <link rel="stylesheet" href="style.css">
+  <title>كريم أبو الصحاب - جميع الروابط</title>
+  <!-- استدعاء أيقونات Font Awesome للحصول على أيقونات التواصل -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* إعادة تعيين وتحضير الخصائص العامة */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0b0f17; /* لون الخلفية الداكن */
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    /* العنوان الرئيسي والفرعي */
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f1f5f9;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    /* قائمة الأزرار/الروابط */
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* تصميم البطاقة الواحدة */
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #161c28; /* لون الكارت الداكن */
+      border: 1px solid #262f40;
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #1e2638;
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+
+    /* الجزء الأيمن (الأيقونة والنصوص) */
+    .card-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .card-info {
+      text-align: right;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .card-subtitle {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* تصميم مربعات الأيقونات */
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    /* ألوان الأيقونات لكل منصة */
+    .tiktok-bg {
+      background: linear-gradient(45deg, #00f2fe, #4facfe, #ff0844);
+    }
+
+    .facebook-bg {
+      background-color: #1877f2;
+    }
+
+    .instagram-bg {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .telegram-bg {
+      background-color: #24a1de;
+    }
+
+    .location-bg {
+      background-color: #22c55e;
+    }
+
+    .whatsapp-bg {
+      background-color: #25d366;
+    }
+
+    /* السهم جهة اليسار */
+    .arrow-icon {
+      font-size: 18px;
+      color: #64748b;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .arrow-icon {
+      color: #ffffff;
+    }
+
+    /* التذييل (Footer) */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .footer-tag {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+
+    .footer-badge {
+      display: inline-block;
+      background-color: #161c28;
+      border: 1px solid #262f40;
+      color: #94a3b8;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
-    <header>
+    <!-- رأس الصفحة -->
+    <div class="header">
       <h1>كريم أبو الصحاب</h1>
       <p>كل روابط التواصل والموقع في مكان واحد</p>
-    </header>
+    </div>
 
-    <!-- تيك توك -->
-    <a href="https://www.tiktok.com/@karim_abukadba" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: linear-gradient(45deg, #00f2fe, #4facfe, #ff0050);">
-          <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
-        </div>
-        <div class="text-group">
-          <span class="platform-name">تيك توك</span>
-          <span class="platform-desc">افتح حساب كريم على تيك توك</span>
-        </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+    <!-- قائمة الأزرار -->
+    <div class="links-list">
 
-    <!-- فيسبوك -->
-    <a href="https://www.facebook.com/karim.abukadba" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: #1877F2;">
-          <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+      <!-- تيك توك -->
+      <a href="https://www.tiktok.com/@sa3at_karim_aboelso7ab?_r=1&_t=ZS-9ATNIN5gHq5" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="text-group">
-          <span class="platform-name">فيسبوك</span>
-          <span class="platform-desc">افتح صفحة فيسبوك</span>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">تيك توك</div>
+            <div class="card-subtitle">تابع حساب كريم على تيك توك</div>
+          </div>
+          <div class="icon-box tiktok-bg">
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
         </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+      </a>
 
-    <!-- إنستجرام -->
-    <a href="https://www.instagram.com/karim_abukadba" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
-          <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+      <!-- فيسبوك -->
+      <a href="https://www.facebook.com/share/1KYgGFKkxt/" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="text-group">
-          <span class="platform-name">إنستجرام</span>
-          <span class="platform-desc">افتح حساب إنستجرام</span>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">فيسبوك</div>
+            <div class="card-subtitle">تابع صفحة الفيسبوك</div>
+          </div>
+          <div class="icon-box facebook-bg">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
         </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+      </a>
 
-    <!-- تلجرام -->
-    <a href="https://t.me/karim_abukadba" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: #24A1DE;">
-          <i class="fa-brands fa-telegram" style="color: #ffffff;"></i>
+      <!-- إنستجرام -->
+      <a href="https://www.instagram.com/karim__ragab?rpxt=YTRkem13cjUzcHF6" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="text-group">
-          <span class="platform-name">تلجرام</span>
-          <span class="platform-desc">افتح قناة تلجرام</span>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">إنستجرام</div>
+            <div class="card-subtitle">تابع حساب إنستجرام</div>
+          </div>
+          <div class="icon-box instagram-bg">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+      </a>
 
-    <!-- الموقع الجغرافي -->
-    <a href="https://maps.app.goo.gl/201107635935" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: #34A853;">
-          <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+      <!-- تلجرام -->
+      <a href="https://t.me/karimaBolso7aB" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="text-group">
-          <span class="platform-name">الموقع الجغرافي</span>
-          <span class="platform-desc">افتح الموقع على خرائط Google</span>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">تلجرام</div>
+            <div class="card-subtitle">تابع قناة تلجرام</div>
+          </div>
+          <div class="icon-box telegram-bg">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
         </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+      </a>
 
-    <!-- واتساب -->
-    <a href="https://wa.me/201107635935" class="card" target="_blank" rel="noopener noreferrer">
-      <div class="card-info">
-        <div class="icon-box" style="background: #25D366;">
-          <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+      <!-- الموقع الجغرافي -->
+      <a href="https://maps.app.goo.gl/2QrMU5ETgc6QjpMw9?g_st=ac" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
         </div>
-        <div class="text-group">
-          <span class="platform-name">واتساب</span>
-          <span class="platform-desc">تواصل معي على واتساب</span>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">الموقع الجغرافي</div>
+            <div class="card-subtitle">افتح الموقع على خرائط جوجل</div>
+          </div>
+          <div class="icon-box location-bg">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
         </div>
-      </div>
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
+      </a>
+
+      <!-- واتساب -->
+      <a href="https://wa.me/201107635935" target="_blank" class="card">
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="card-right">
+          <div class="card-info">
+            <div class="card-title">واتساب</div>
+            <div class="card-subtitle">تواصل معي على الواتساب</div>
+          </div>
+          <div class="icon-box whatsapp-bg">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- الفوتر -->
+    <div class="footer">
+      <div class="footer-tag">◆ التمني والمراعاة والمودة ◆</div>
+      <span class="footer-badge">karim-links.github.io</span>
+    </div>
 
   </div>
 
-  <footer>
-    ◆ تابعني وكن جزءاً من الرحلة ◆
-  </footer>
-
 </body>
 </html>
+```<FollowUp>
+<Suggest>
+- هل تريد إضافة زر اتصال مباشر (Call) برقم الهاتف بجانب الواتساب؟
+- هل تحتاج إلى إضافة تأثيرات حركة (Animations) عند تحميل الصفحة؟
+- هل تود تغيير شعار الفوتر أو إضافة رابط حقيقي للفوتر؟
+</Suggest>
+</FollowUp>
