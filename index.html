@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>كريم أبو الصحاب - جميع الروابط</title>
-  <!-- استدعاء أيقونات Font Awesome للحصول على أيقونات التواصل -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    /* إعادة تعيين وتحضير الخصائص العامة */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,10 +14,14 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
-      background-color: #080b11;
-      color: #ffffff;
+    html, body {
       min-height: 100vh;
+      width: 100%;
+    }
+
+    body {
+      background-color: #05070a;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -29,29 +31,28 @@
       overflow-x: hidden;
     }
 
-    /* الخلفية المضبة (Blurred Background) */
+    /* خلفية بلور كبيرة وعميقة مغطية الشاشة كلها */
     .bg-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('profile.jpg'); /* تأكد من تسمية الصورة بـ profile.jpg في نفس المجلد */
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      background-image: url('profile.jpg');
       background-size: cover;
       background-position: center;
-      filter: blur(25px) brightness(0.25);
-      transform: scale(1.1);
+      filter: blur(35px) brightness(0.22) contrast(1.1);
       z-index: -1;
     }
 
     .container {
       width: 100%;
-      max-width: 420px;
+      max-width: 410px;
       text-align: center;
-      z-index: 1;
+      z-index: 2;
     }
 
-    /* قسم البروفايل والصورة الشخصية */
+    /* البروفايل والدائرة الذهبية */
     .profile-section {
       margin-bottom: 25px;
       display: flex;
@@ -59,67 +60,67 @@
       align-items: center;
     }
 
-    .profile-avatar {
-      width: 120px;
-      height: 120px;
+    .profile-avatar-container {
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #d4af37; /* إطار ذهبي أنيق */
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25), 0 0 15px rgba(0, 0, 0, 0.8);
+      border: 3px solid #d4af37;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.35), 0 8px 20px rgba(0, 0, 0, 0.9);
       margin-bottom: 15px;
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      background-color: #111622;
     }
 
-    .profile-avatar:hover {
-      transform: scale(1.05);
+    .profile-avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    /* العنوان الرئيسي والفرعي */
     .header h1 {
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 6px;
       color: #ffffff;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
     .header p {
       font-size: 14px;
       color: #cbd5e1;
       margin-bottom: 25px;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.8);
     }
 
-    /* قائمة الأزرار/الروابط */
     .links-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 15px;
     }
 
-    /* تصميم البطاقة الواحدة */
     .card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(22, 28, 40, 0.75);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(18, 24, 38, 0.82);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 16px;
       padding: 16px 20px;
       text-decoration: none;
       color: #ffffff;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
     .card:hover {
-      background: rgba(30, 38, 56, 0.9);
-      border-color: rgba(212, 175, 55, 0.5);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      background: rgba(28, 36, 56, 0.92);
+      border-color: rgba(212, 175, 55, 0.6);
+      transform: translateY(-2px);
     }
 
-    /* الجزء الأيمن (الأيقونة والنصوص) */
     .card-right {
       display: flex;
       align-items: center;
@@ -142,7 +143,6 @@
       color: #94a3b8;
     }
 
-    /* تصميم مربعات الأيقونات */
     .icon-box {
       width: 46px;
       height: 46px;
@@ -152,10 +152,9 @@
       justify-content: center;
       font-size: 22px;
       color: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
-    /* ألوان الأيقونات لكل منصة */
     .whatsapp-bg { background-color: #25d366; }
     .tiktok-bg { background: linear-gradient(45deg, #00f2fe, #4facfe, #ff0844); }
     .facebook-bg { background-color: #1877f2; }
@@ -163,18 +162,15 @@
     .telegram-bg { background-color: #24a1de; }
     .location-bg { background-color: #22c55e; }
 
-    /* السهم جهة اليسار */
     .arrow-icon {
       font-size: 16px;
       color: #64748b;
-      transition: color 0.3s ease;
     }
 
     .card:hover .arrow-icon {
       color: #ffffff;
     }
 
-    /* التذييل (Footer) */
     .footer {
       margin-top: 35px;
       text-align: center;
@@ -188,8 +184,8 @@
 
     .footer-badge {
       display: inline-block;
-      background: rgba(22, 28, 40, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(18, 24, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       color: #cbd5e1;
       padding: 8px 18px;
       border-radius: 20px;
@@ -200,24 +196,24 @@
 </head>
 <body>
 
-  <!-- طبقة الخلفية المعتمة والمضبة -->
+  <!-- طبقة البلور الخلفية الشاملة -->
   <div class="bg-overlay"></div>
 
   <div class="container">
     
-    <!-- قسم الصورة الشخصية والرأس -->
     <div class="profile-section">
-      <img src="profile.jpg" alt="كريم أبو الصحاب" class="profile-avatar">
+      <div class="profile-avatar-container">
+        <img src="profile.jpg" alt="كريم أبو الصحاب" class="profile-avatar">
+      </div>
       <div class="header">
         <h1>كريم أبو الصحاب</h1>
         <p>كل روابط التواصل والموقع في مكان واحد</p>
       </div>
     </div>
 
-    <!-- قائمة الأزرار (الواتساب في المقدمة تماماً) -->
     <div class="links-list">
 
-      <!-- 1. واتساب -->
+      <!-- 1. واتساب في البداية -->
       <a href="https://wa.me/201107635935" target="_blank" class="card">
         <div class="arrow-icon"><i class="fa-solid fa-arrow-left"></i></div>
         <div class="card-right">
@@ -268,7 +264,7 @@
       <!-- 5. تلجرام -->
       <a href="https://t.me/karimaBolso7aB" target="_blank" class="card">
         <div class="arrow-icon"><i class="fa-solid fa-arrow-left"></i></div>
-        .        <div class="card-right">
+        <div class="card-right">
           <div class="card-info">
             <div class="card-title">تلجرام</div>
             <div class="card-subtitle">تابع قناة تلجرام</div>
@@ -291,7 +287,6 @@
 
     </div>
 
-    <!-- الفوتر -->
     <div class="footer">
       <div class="footer-tag">◆ التمني والمراعاة والمودة ◆</div>
       <span class="footer-badge">karim-links.github.io</span>
